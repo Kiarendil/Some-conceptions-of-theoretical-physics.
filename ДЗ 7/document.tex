@@ -1,0 +1,171 @@
+\documentclass[12pt]{kiarticle} 
+
+
+\begin{document}
+
+\begin{titlepage}		
+	\begin{center}
+		\large 	Московский физико-технический университет \\
+		Факультет общей и прикладной физики \\
+		\vspace{0.2cm}
+		Учебная программа\\
+		"<Квантовая теория поля, теория струн и математическая физика">
+		
+		\vspace{4.5cm}
+		II семестр 2016-2017 учебного года \\ \vspace{0.1cm}
+		\large Домашнее задание №7: \\ \vspace{0.1cm}
+		\LARGE \textbf{Уравнения Максвелла, матрицы Дирака}
+	\end{center}
+	\vspace{2.3cm} \large
+	
+	\begin{center}
+		Автор: \\
+		Иванов Кирилл,
+		625 группа
+		\vspace{10mm}
+		
+		
+	\end{center}
+	
+	\begin{center} \vspace{50mm}
+		г. Долгопрудный \\ 
+		21 мая 2017 года
+	\end{center}
+\end{titlepage}
+
+%______________________________________________________________________________________________
+
+\section{Задача №1}
+
+Запишем уравнения Максвелла: 
+
+\begin{eqnarray}
+\sys{
+	& \dpa_{\mu} F^{\mu\nu} = 0   \\ 
+	& \dpa_{\lambda}F_{\mu\nu} + \dpa_{\mu} F_{\nu\lambda} + \dpa_\nu F_{\lambda\mu} = 0 \\ 
+}
+\end{eqnarray}
+
+На лекциях нами были получены следующие правила преобразований координаты и электромагнитного тензора:
+
+\begin{equation}\label{}
+\sys{
+& x^\mu \st x'^\mu = \Lambda^\mu_\nu x^\nu \te \dpa_\mu x \st \dpa'_\mu x' = \Lambda^\nu_\mu \dpa_{\nu} x \\
+& F^{\mu\nu} \st F'^{\mu\nu} = \lm^\mu_\al \lm^\nu_\beta F^{\al\beta}
+}
+\end{equation}
+
+Где $ \lm^\mu_\nu $ --- матрица из группы преобразования Лоренца. Подставим из (2) в первое уравнение (1): 
+
+\begin{equation}\label{}
+ \dpa'_{\mu} F'^{\mu\nu} = \Lambda^\pi_\mu \dpa_{\pi}F'^{\mu\nu} = \Lambda^\pi_\mu \dpa_{\pi} \lm^\mu_\al \lm^\nu_\beta F^{\al\beta} = \dpa^\pi_\al \dpa_\pi \lm^\nu_\beta F^{\al\beta} = \dpa_\al  \lm^\nu_\beta F^{\al\beta} = \lm^\nu_\beta  = \dpa_\al  F^{\al\beta} = 0
+\end{equation}
+
+Мы получили $ \lm $, умноженную на такую же (по типу) производную, что и в первом уравнении (1) $ \te $ она тоже равна нулю, и это уравнение инвариантно. Аналогично рассмотрим второе уравнение:
+
+\begin{equation}\label{}
+\lm^\pi_\lambda \dpa_\pi\lm^\al_\mu \lm^\beta_\nu F_{\al\beta} + \lm^\al_\mu \dpa_\al \lm^\beta_\nu \lm^\pi_\lambda  F_{\beta\pi} + \lm^\beta_\nu \dpa_\beta \lm^\pi_\lambda \lm^\al_\mu  F_{\pi\al} = \lm^\pi_\lambda \lm^\al_\mu \lm^\beta_\nu (\dpa_\pi F_{\al\beta} + \dpa_\al F_{\beta\pi} + \dpa_\beta F_{\pi\al}) = 0
+\end{equation}
+
+Получилось все действительно абсолютно аналогично. Таким образом, мы доказали, что уравнения Максвелла (1) инварианты относительно преобразований Лоренца (2).
+
+
+
+
+
+
+\section{Задача №3}
+
+По условию, мы работаем с $ 4\times4 $ матрицами $ A_{\mu\nu} $ из группы Лоренца, т.е. для них верно:
+
+\begin{equation}\label{}
+A_{\mu\al}A_{\nu\beta}\eta_{\al\beta}= \eta_{\mu\nu}, \quad \mu, \nu = 0, 1, 2, 3
+\end{equation}
+
+Где $ \eta_{\mu\nu}  $ --- метрика, т.е .$ \eta_{\mu\nu} =  \diag (1, -1, -1, -1).  $ Также мы используем $ 4\times4 $ матрицы Дирака, для которых верно:
+
+\begin{equation}\label{}
+\gamma_\mu \gamma_\nu + \gamma_\nu \gamma_\mu =\sak{\gamma_\mu, \gamma_\nu} = 2 \eta_{\mu\nu}E
+\end{equation}
+
+$ E $ --- единичная матрица $ 4\times4 $. При этом рассмотрим следующее приближение:
+
+\begin{equation}\label{}
+A_{\mu\nu} = E + \omega_{\mu\nu}, \quad \omega_{\mu\nu} \ll 1
+\end{equation}
+
+Мы задаем матрицу $ S(A)$ как удовлетворяющему следующему условию: 
+
+\begin{equation}\label{}
+A_{\mu\nu}\gamma_\nu = S^{-1}(A)\gamma_\mu S(A)
+\end{equation}
+
+Подставив условие (7) в (5), мы получаем, что  $ (E +  \omega_{\mu\al})(E + \omega_{\nu\beta}) \eta_{\al\beta} = (E + \omega_{\nu\beta})(\eta_{\al\nu} +  \omega_{\nu\al}) = \eta_{\mu\nu}  $, отсюда $ \omega_{\mu\nu} = -\omega_{\nu\mu} $. 
+
+Будем искать искомое $ S(A) $ в виде разложения
+
+\begin{equation}\label{}
+S(A) = C_0(A)E + C_\mu (A) \gamma_\mu + C_{\mu\nu}(A)\sab{\gamma_\mu,\gamma_\nu} + ...
+\end{equation}
+
+Причем в случае (7) это разложение приобретает вид 
+
+\begin{equation}\label{}
+S(A) = E + \omega_{\mu\nu}\gm
+\end{equation}
+
+Где $ \gm $ -- матрица $ 4 \times 4 $. Проверим это. Чтобы найти эти коэффициенты $ С_i(A) $, мы будем исследовать разложение до $ i $-того члена, пользуясь определение обратной матрицы:
+
+\begin{equation}\label{}
+i = 0, \quad S^{-1}(A)S(A) = E \ekv C_0(A)EC_0(A)E = E \te C_0(A) = 1
+\end{equation}
+
+\begin{equation*}\label{}
+i = 1, \quad S^{-1}(A)S(A) = E \ekv (C_0(A)E- C_\mu (A) \gamma_\mu)(C_0(A)E + C_\mu (A) \gamma_\mu) = E \ekv
+\end{equation*}
+\begin{equation}\label{}
+\ekv C_\mu (A) \gamma_\mu - C_\mu (A) \gamma_\mu - C_\mu (A) \gamma_\mu C_\mu (A) \gamma_\mu = 0 \ekv C_\mu (A) \gamma_\mu C_\mu (A) \gamma_\mu = 0 \te C_\mu (A) = 0 
+\end{equation}
+
+\[ 
+i = 2, \quad S^{-1}(A)S(A) = E \ekv (E - C_{\mu\nu}(A)\sab{\gamma_\mu,\gamma_\nu})(E + C_{\mu\nu}(A)\sab{\gamma_\mu,\gamma_\nu}) = 0 \ekv
+ \]
+ \[ 
+ \ekv (E - C_{\mu\nu}(E + \omega_{\mu\nu})\sab{\gamma_\mu,\gamma_\nu})(E + C_{\mu\nu}(E + \omega_{\mu\nu})\sab{\gamma_\mu,\gamma_\nu}) = E \ekv
+  \]
+  \begin{equation}\label{}
+  \ekv (E - \omega_{\mu\nu}\sab{\gamma_\mu,\gamma_\nu})(E +  \omega_{\mu\nu}\sab{\gamma_\mu,\gamma_\nu}) = E
+  \end{equation}
+
+Таким образом, мы получили, что при условии (7) разложение (9) действительно принимает вид (10), причём $ \gm $ является функцией от коммутатора $ \sab{\gamma_\mu,\gamma_\nu} $. Теперь найдем уравнение для $ \gm $: подставим в наше условие (8) выражения из (7) и (10) и получаем:
+
+\begin{equation*}\label{}
+(E - \omega_{\mu\nu}\gm)\gamma_\mu(E +  \omega_{\mu\nu}\gm) = (E + \omega_{\mu\nu})\gamma_\nu  \ekv 
+E \gamma_\mu + \gamma_\mu \omega_{\mu\nu}\gm -  \omega_{\mu\nu}\gm\gamma_\mu = E\gamma_\nu + \omega_{\mu_\nu} \ekv 
+\end{equation*}
+\begin{equation}\label{}
+\ekv \sab{\gamma_\mu, \omega_{\mu\nu}\gm } = \omega_{\mu\nu}\gamma_\nu 
+\end{equation}
+
+Это и есть искомое уравнение на $ \gm $. Преобразуем его:
+
+\begin{equation}\label{}
+\omega_{\mu\nu}\gamma_\nu  = \omega_{\al\beta}\sab{\gamma_\mu, \Gamma_{\al\beta}} =  \frac{\omega_{\al\beta}}{2}(\eta_{\mu\al}\gamma_\beta-\eta_{\mu\beta}\gamma_\alpha) = \frac{1}{2} (\omega_{\mu\beta}\gamma_\beta + \omega_{\mu\al}\gamma_\alpha) = \omega_{\mu\al}\gamma_\alpha
+\end{equation}
+
+Можно заметить, что $ \sab{\gamma_\mu, \Gamma_{\al\beta}} = \frac{1}{2}(\eta_{\mu\al}\gamma_\beta-\eta_{\mu\beta}\gamma_\alpha) = \frac{1}{4}(\sak{\gamma_\mu, \gamma_\al}\gamma_\beta - \sak{\gamma_\mu, \gamma_\beta}\gamma_\al)$. Тогда мы воспользуемся соотношением на антикоммутаторы (6) и подставим в полученное выражение:
+
+\begin{equation}\label{}
+\frac{1}{4}\sab{\gamma_\mu, \Gamma_{\al\beta}} = \frac{1}{4}(\gamma_\mu\gamma_\al \gamma_\beta + \gamma_\alpha\gamma_\mu\gamma_\beta - \gamma_\mu \gamma_\beta \gamma_\alpha - \gamma_\beta\gamma_\mu\gamma_\alpha ) = \frac{1}{4} (\gamma_\mu\sab{\gamma_\alpha, \gamma_\beta} -  \sab{\gamma_\alpha, \gamma_\beta} \gamma_\mu ) = \frac{1}{4}\sab{\gamma_\mu, \gamma_\alpha \gamma_\beta}
+\end{equation}
+
+Отсюда получаем искомый ответ: 
+
+\begin{equation}\label{}
+\Gamma_{\al\beta} =  \dfrac{1}{4} \sab{ \gamma_\alpha, \gamma_\beta}
+\end{equation}
+
+Это и есть выражение матриц $ \Gamma $ через матрицы Дирака.
+
+
+\end{document}

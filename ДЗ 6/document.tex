@@ -1,0 +1,563 @@
+\documentclass[12pt]{kiarticle} 
+\graphicspath{{../pictures/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps}
+\usepackage{indentfirst}
+%%%
+\fancyhead[L]{Задание № 6 \hfil}
+\fancyhead[R]{\hfil Иванов Кирилл, 625 группа }
+
+\begin{document}
+
+\begin{titlepage}		
+	\begin{center}
+		\large 	Московский физико-технический университет \\
+		Факультет общей и прикладной физики \\
+		\vspace{0.2cm}
+		Учебная программа\\
+		"<Квантовая теория поля, теория струн и математическая физика">
+		
+		\vspace{4.5cm}
+		II семестр 2016-2017 учебного года \\ \vspace{0.1cm}
+		\large Домашнее задание №6: \\ \vspace{0.1cm}
+		\LARGE \textbf{Преобразования Лоренца, уравнения Максвелла и алгебра Клиффорда}
+	\end{center}
+	\vspace{2.3cm} \large
+	
+	\begin{center}
+		Автор: \\
+		Иванов Кирилл,
+		625 группа
+		\vspace{10mm}
+		
+		
+	\end{center}
+	
+	\begin{center} \vspace{50mm}
+		г. Долгопрудный \\ 
+		19 мая 2017 года
+	\end{center}
+\end{titlepage}
+
+%______________________________________________________________________________________________
+
+\section{Задача №1}
+
+В прошлом задании были получены преобразования Лоренца:
+
+\begin{equation}
+K {\large \xrightarrow{v_1}} K':
+\left\{
+\begin{aligned}
+&x' = \dfrac{x + v_1t}{\sqrt{1-v_1^2/c^2}} \\
+&t' = \dfrac{t + v_1x/c^2}{\sqrt{1-v_1^2/c^2}} \\
+\end{aligned}
+\right.
+\end{equation}
+
+Из условий задачи запишем аналогичные преобразования для следующего перехода:
+
+\begin{equation}
+K' {\large \xrightarrow{v_2}} K'':
+\left\{
+\begin{aligned}
+&x'' = \dfrac{x' + v_2t'}{\sqrt{1-v_2^2/c^2}} \\
+&t'' = \dfrac{t' + v_2x'/c^2}{\sqrt{1-v_2^2/c^2}} \\
+\end{aligned}
+\right.
+\end{equation}
+
+Сделаем прямую подстановку  $ x', t' $ из (1) в (2):
+
+\begin{equation}
+\left\{
+\begin{aligned}
+&x'' = \dfrac{(x + v_1t) + v_2(t + v_1\frac{x}{c^2})}
+{\sqrt{ (1-v_1^2/c^2)(1-v_2^2/c^2) }} \\
+&t'' = \dfrac{(t + v_1\frac{x}{c^2}) + \frac{v_2}{c^2}(x + v_1t)}
+{\sqrt{ (1-v_1^2/c^2)(1-v_2^2/c^2) }}\\
+\end{aligned}
+\right.
+%%%%
+\te
+%%%%
+\left\{
+\begin{aligned}
+&x'' = \dfrac{x\left( 1 + \dfrac{v_1v_2}{c^2}\right)  + t(v_1 + v_2)}
+{\sqrt{ 1 - \frac{v_1^2+v_2^2}{c^2}  + \frac{v_1^2v_2^2}{c^4}}} \\
+&t'' = \dfrac{t\left( 1 + \dfrac{v_1v_2}{c^2}\right)  + x\frac{v_1 + v_2}{c^2}}
+{\sqrt{ 1 - \frac{v_1^2+v_2^2}{c^2} + \frac{v_1^2v_2^2}{c^4}}}\\
+\end{aligned}
+\right.
+\end{equation}
+
+Введём напрашивающуюся замену:
+
+\begin{equation}
+\left\{
+\begin{aligned}
+&a = v_1 + v_2 \\
+&b = \dfrac{v_1v_2}{c^2}\\
+\end{aligned}
+\right.
+%%%%
+\te
+%%%%
+\left\{
+\begin{aligned}
+&a^2 = v_1^2 + 2bc^2 + v_2^2 \\
+&b^2 = \dfrac{v_1^2v_2^2}{c^4}\\
+\end{aligned}
+\right.
+%%%%
+\te 
+%%%%
+\left\{
+\begin{aligned}
+&v_1^2 + v_2^2 = a^2 - 2bc^2  \\
+&-\frac{v_1^2 + v_2^2}{c^2} = -\frac{a^2}{c^2} + 2b \\
+\end{aligned}
+\right.
+\end{equation}
+
+Перепишем (3) в новых обозначениях:
+
+\begin{equation}
+\left\{
+\begin{aligned}
+&x'' = \dfrac{ x(1+b) + ta }
+{ \sqrt{1-\frac{a^2}{c^2} + 3b} } \\
+&t'' = \dfrac{t(1+b) + x\frac{a}{c^2} }
+{\sqrt{1-\frac{a^2}{c^2} + 3b } }\\
+\end{aligned}
+\right.
+\end{equation}
+
+Тогда очевидно, что функция $ u = u(v_1,v_2) $ должна иметь следующий вид: 
+
+\begin{equation}
+u(v_1,v_2) = \dfrac{v_1+v_2}{1+\frac{v_1v_2}{c^2}} = \dfrac{a}{1 + b} 
+\end{equation}
+
+Подстановкой в (5) мы убеждаемся, что после элементарных  алгебраических преобразований преобразования принимают искомый вид:
+
+\begin{equation}
+\left\{
+\begin{aligned}
+&x'' = \dfrac{ x+ ut }
+{ \sqrt{1-\frac{u^2}{c^2}} } \\
+&t'' = \dfrac{t + x\frac{u}{c^2} }
+{\sqrt{1-\frac{u^2}{c^2} } }\\
+\end{aligned}
+\right.
+\end{equation}
+
+Таким образом, мы доказали, что преобразования Лоренца действительно образуют группу.
+
+\begin{solv}
+{
+	Ответ: $ u(v_1,v_2) = \dfrac{v_1+v_2}{1+\frac{v_1v_2}{c^2}}$
+}
+\end{solv}
+
+
+
+
+\section{Задача №2}
+
+Запишем уравнений Максвелла:
+
+\begin{equation}
+\left\{
+\begin{aligned}
+& \di \mathbf{E} = 4\pi\rho \\
+& \di \textbf{H} = 0 \\
+& \rot \mathbf{E} = -\dfrac{1}{c}\pdd{\mathbf{H}}{t} \\
+& \rot \mathbf{H} = \dfrac{4\pi}{c}\mathbf{\mathfrak{j}} \\
+\end{aligned}
+\right.
+\end{equation}
+
+Так как дивергенцию и ротор можно определить в нашем пространстве как $ \di \mathbf{F} = \nabla \hm{\x} \mathbf{F}, \,  \rot \mathbf{F} = \nabla \times \mathbf{F} $, то уравнения примут вид (базисы пространства $ \ii, \jj, \kk $):
+
+\begin{equation}
+\left\{
+\begin{aligned}
+& 4\pi\rho = \pdd{E_x}{x} + \pdd{E_y}{y} + \pdd{E_z}{z} \\
+&  0 =  \pdd{H_x}{x} + \pdd{H_y}{y} + \pdd{H_z}{z} \\
+&  -\dfrac{1}{c}\pdd{\mathbf{H}}{t} =
+\s{\pdd{E_z}{y} - \pdd{E_y}{z}}\ii +
+\s{\pdd{E_x}{z} - \pdd{E_z}{x}}\jj +
+\s{\pdd{E_y}{x} - \pdd{E_x}{y}}\kk 
+\\
+& \dfrac{4\pi}{c}\mathbf{J} =
+\s{\pdd{H_z}{y} - \pdd{H_y}{z}}\ii +
+\s{\pdd{H_z}{y} - \pdd{H_y}{z}}\jj +
+\s{\pdd{H_z}{y} - \pdd{H_y}{z}}\kk 
+\\
+\end{aligned}
+\right.
+\end{equation}
+
+Задача существенно упростится, если запишем уравнения в 4-мерном виде в вакууме:
+
+\begin{equation}\label{}
+\sys{
+& \dpa_{\lambda}F_{\mu\nu} + \dpa_{\mu} F_{\nu\lambda} + \dpa_\nu F_{\lambda\mu} = 0 \\
+& \dpa_{\mu} F^{\mu\nu} = 0 \\
+}
+\end{equation}
+
+Здесь мы используем обозначения: 
+\[ 
+\dpa_0 = -\frac{1}{c}\pdd{}{t}, \; \dpa_1 = \pdd{}{x}, \; \dpa_2 = \pdd{}{y}, \; \dpa_3 = \pdd{}{z}, 
+ \]
+ \[ 
+ F_{0i}  = E_i, \; F_{ik} = - \varepsilon_{ikl}H_l \; 
+  \]
+
+Выпишем явно ковариантные коэффициенты (ведь мы работаем с ковариантными производными) антисимметричного тензора ЭМ поля $ F_{\mu\nu} $:
+
+\begin{equation}\label{}
+F_{\mu\nu} =
+\begin{pmatrix}
+0 & E_x & E_y & E_z \\
+-E_x & 0 & H_z & -H_y \\ 
+-E_y & -H_z & 0 & H_x \\
+-E_z & H_y& -H_x& 0 \\
+\end{pmatrix} 
+\end{equation}
+
+Нам известно, что при преобразованиях Лоренца $ x, t $ изменяются согласно (1), а $ y' \hm{= }y, \; z' = z $. Это означает, что компоненты нашего тензора $ F_{01} = E_x $ и $ F_{32} = H_x $ сохраняются. (В самом деле, так как $ y,z \equiv x^2, x^3 = \inv  \te F^{23} = inv \te F_{32} = inv $ согласно свойствам антисимметричного тензора, а $ F_{01} = -F_{01} = inv $ (а так же нулевые $ F_{00} = F_{11} = 0 $) из-за неизменности по отношению к поворотам в двумерной системе, которые находятся во втором миноре $ 2 \times 2 $ матричного представления нашего 4-тензора). Найдем теперь преобразования остальных компонент.
+
+Согласно свойствам компонент 4-тензора, они преобразуются так же, как и произведение компонент двух 4-векторов. Выше мы нашли инвариантные компоненты, тогда мы понимаем, что компоненты $ F_{02}, F_{03} $ и $ F_{12}, F_{13} $ преобразуются так же, как $ x^0, x^1 \equiv tc, x $ соответственно, т.е. по формулам, обратным (1). Это следует из того, что когда одна из цифр индекса переходит в себя (2 или 3), тогда компонента преобразуется как координата с нефиксированным индексом (0 или 1).  Запишем явно:
+
+\begin{equation}
+\left\{
+\begin{aligned}
+&x = \dfrac{x' - vt'}{\sqrt{1-v^2/c^2}} \\
+&t = \dfrac{t' - vx'/c^2}{\sqrt{1-v^2/c^2}} \\
+\end{aligned}
+\right.
+\te
+ F_{02} = \gamma \s{F'_{02} - \frac{v}{c}F'_{12}}, \; F_{12} = \gamma  \s{F'_{12} -\frac{v}{c} F'_{02}}
+\end{equation}
+
+Так же преобразуются и $ F_{02}, F_{13} $. Здесь мы использовали релятивистский корень $ \gamma \hm{=} 1/\sqrt{1 - v^2/c^2} $. Подставив на место компонент тензора наши проекции $ E_i, H_i $ и выразив "<штрихованные"> компоненты через "<обычные">, мы получаем искомые линейные комбинации:
+
+\begin{equation}\label{}
+\begin{aligned}
+E'_x = E_x, \; \; E'_y = \gamma \s{E_y + \frac{v}{c}H_{z}}, \; \; E'_z = \gamma \s{E_z - \frac{v}{c}H_{y}}, \\
+H'_x = H_x, \; \; H'_y = \gamma \s{H_y - \frac{v}{c}E_{z}}, \; \; H'_z = \gamma \s{H_z + \frac{v}{c}E_{y}},
+\end{aligned}
+\end{equation}
+
+Итак, мы нашли преобразованные проекции полей, выражающиеся в виде линейной комбинации изначальных, что означает утвердительный ответ на вопрос задачи.
+
+
+
+
+
+
+
+
+
+\section{Задача №3}
+
+Образующие $ g_n $ нашей алгебры Клиффорда $ \mathscr{A}(N) $ такие, что $ \{g_i, g_j\} = 2\delta_{ij} $, и в качестве базиса линейного пространства (которым является алгебра) можно взять единицу алгебры $ e $ и мономы $ g_{n_1}, ... g_{n_k} $. Cимвол Кронекера $ \delta_{ij} = 1\, (i = j), \delta_{ij} = 0\, (i \neq j) $.
+
+\underline{\textbf{Посмотрим на алгебру  $ \mathscr{A}(2)  $: }}
+\[ 
+\sak{g_1, g_1} = g_1^2 + g_1^2 = 2\delta_{11} \te g_1^2 = 1 
+ \]
+ \[ 
+ \sak{g_2, g_2} = g_2^2 + g_2^2 = 2\delta_{22} \te g_2^2 = 1 
+  \]
+ \[ 
+ \sak{g_1, g_2} = g_1g_2 + g_2g_1 = 2\delta_{12} \te g_1g_2 = - g_1g_2
+  \]
+  
+  Отсюда получаем, что независимых (в смысле обычной линейной зависимости векторов) мономов по типу указанных выше 3, т.е. базисом алгебры $ \mathscr{A}(2) $ можно назвать следующую систему элементов алгебры:  
+  
+  \begin{equation}\label{}
+  \text{Базис } \mathscr{A}(2): e, \, g_1, \, g_2, \, g_1g_2 \te \mathbf{4 \text{ \textbf{элемента}}}
+  \end{equation}
+
+\underline{\textbf{Теперь посмотрим на алгебру $ \mathscr{A}(4)  $: }}
+\[ 
+\sak{g_i, g_i} = g_i^2 + g_i^2 = 2\delta_{ii} \te g_i^2 = 1 \,( i = 1, 2, 3, 4)
+ \]
+ \[ 
+ \sak{g_i, g_j} = g_ig_j+ g_jg_i = 2\delta_{ij} \te g_ig_j = - g_jg_i \,( i, j = 1, 2, 3, 4)
+  \]
+  
+ Будем искать независимые мономы произведений образующих. 
+ \begin{itemize}
+ 	\item Понятно, что есть \textbf{4 "<одиночных"> мономов} $ g_i $.
+ 	
+ 	\item Для поиска "<двойного"> монома зафиксируем номер второго элемента и будет пробегать значения первого, т.е.: есть 3 независимых  $ g_ig_1 $, при $ j = 2$ нам подходят только $ g_3g_2, g_4g_2, $ и при $ j = 3 $  мы берем только $ g_4g_3 $, при $ j = 4 $ новых независимых произведений мы не получим $ \te $ всего \textbf{6 "<двойных"> мономов}.
+ 	
+ 	\item  "<Тройные"> несложно перебрать явным образом: начнём с $ g_1g_2g_3 $, затем $ g_1g_2g_4, $ потом $ g_1g_3g_4 $ и наконец  $ g_2g_3g_4 $. Понятно, что остальные будут линейны зависимы с этими, т.е. \textbf{4 "<тройных"> монома}.
+ 	
+ 	\item Наконец, нетрудно понять, что есть всего \textbf{1 "<четвертной"> моном}: $ g_1g_2g_3g_4 $, ведь как и в случае с тремя, благодаря зависимости произведений $ g_ig_j $ все остальные комбинации также будут зависимы. 
+ \end{itemize}
+
+Итак, получаем в качестве базиса следующую систему: 
+
+\begin{equation}\label{}
+\text{Базис } \mathscr{A}(2): e, 4 \, g_i, 6 \, g_ig_j, 4 \, g_ig_jg_k, g_1g_2g_3g_4 \te \mathbf{16 \text{ \textbf{элемента}}}
+\end{equation}
+
+Обобщая наши результаты для $ \mathscr{A}(N) $, мы замечаем, что в обоих случая получился треугольник Паскаля из разнообразных типов элементов базиса для $ N $-ой строчки: 
+\begin{center}
+	$ 1, 2, 1 $ для $ N = 2 $ \\
+	$ 1, 4, 6, 4, 1 $ для $ N = 4 $
+\end{center}
+
+Таким образом, нетрудно понять, что число элементов базисы алгебры Клиффорда $ \dim \mathscr{A}(N) = 2^N $, что и выполняется для наших частных случаев.
+
+\begin{solv}
+	{Ответ: $ \dim \mathscr{A}(N) = 2^N$ }
+\end{solv}
+
+
+
+
+
+
+\section{Задача №4}
+
+Будем работать с алгеброй Клиффорда $ \mathscr{A}(N) $ в линейном пространстве $ V: \dim V = 2^{N/2}$. Тогда введем следующие линейные комбинации образующих алгебры $ g_i, \, i = 1, ..., N $:
+
+\begin{equation}\label{b+-}
+b_k^\pm = \dfrac{g_{2k-1} \pm ig_{2k}}{2}
+\end{equation}
+
+Так как образующие удовлетворяют соотношению $ \{g_i, g_j\} = 2\delta_{ij} $, то несложно проверить, что одинаковые операторы равны нулю всегда, а противоположные удовлетворяют тому же соотношению, т.е. 
+
+\begin{equation}\label{b_sc}
+\sys{
+& \{b^+_i,b^+_j\} =  \{b^-_i,b^-_j\} = 0 \, \, \forall i, j \\
+& \{b^+_i, b^-_j\} = b^+_ib^-_j + b^-_jb^+_i = \delta_{ij}
+}
+\end{equation}
+
+В самом деле:
+\[ 
+\{b^+_i,b^+_j\} = \frac{1}{4}\s{(g_{2i-1} + ig_{2i})(g_{2j-1} + ig_{2j}) + (g_{2j-1} + ig_{2j})(g_{2i-1} + ig_{2j}) }
+ \]
+ \[ 
+ \{b^+_i,b^+_j\} = \frac{1}{4}\s{g_{2i-1}g_{2j-1} + ig_{2i-1}g_{2j} +  ig_{2i}g_{2j-1} - g_{2i}g_{2j} + g_{2j-1}g_{2i-1} + ig_{2i}g_{2j-1} +  ig_{2j}g_{2i-1} - g_{2j}g_{2i} }
+  \]
+  \[ 
+  \{b^+_i,b^+_j\}  = \frac{1}{4}\s{\sak{g_{2i-1}, g_{2j-1} } - \sak{g_{2i}, g_{2j} } + i\sak{g_{2i-1}, g_{2j}} + i\sak{g_{2i}, g_{2j-1}} }
+   \]
+  
+  Учитывая антикоммутирующие свойства $ g_k $ , получаем искомое равенство нулю, аналогично получаем ответ для остальных равенств системы \eqref{b_sc}.
+
+\subsection{Поиск базиса}
+
+Мы работаем с представлением алгебры, элементами являются матрицы размера $ 2^{N/2}~\times~2^{N/2} $, и ставим в соответствие элементам алгебры (точнее, $ b^{\pm}_k $) линейные операторы в пространстве $ V $. То есть мы действуем на вектор $ v $ из $ V $ матрицами $ b^{\pm}_k $ и получаем другой вектор. Рассмотрим существование такого вектора $ |v\rangle  $, который удовлетворяет условию:
+
+\begin{equation}\label{}
+b^-_k\vv = 0
+\end{equation}
+
+Покажем, что такое вектор существует. В самом деле, пусть $ \exists w \in V: w = b^-_k\vv \neq 0$. Тогда подействуем на вектор $ w $ тем же оператором, т.е. рассмотрим $ W \in V: W = b^-_kw = b^-_kb^-_k\vv $. Тогда согласно \eqref{b_sc} мы получаем, что $ b_k^-b_k^- = 0 \te W = 0 $. Тогда просто переопределим $ \vv \equiv W $, \textbf{т.е. такой вектор всегда существует.}
+
+Найдём частные случаи систем векторов типа 
+\begin{equation}\label{}
+v(s_1,..s_{N/2}) = (b^+_1)^{s_1}...(b^+_k)^{s_{N/2}}\vv, \, \, s_i = 0,1\, \forall i
+\end{equation}
+
+\underline{\textbf{Посмотрим на алгебру  $ \mathscr{A}(2)  $: }} у нее есть два элемента типа $ b^{\pm}_k $, а именно $ b^+, b^- $. Таким образом, $ v(s_1) = \s{b^+}^{s_1}\vv $. Понятно, что тогда есть два таких вектора:
+$$ \vv \text{ и }  b^+\vv $$
+%
+\underline{\textbf{У алгебры  $ \mathscr{A}(4)  $}} есть 4 ЛК типа \eqref{b+-}:  $ b^{\pm}_1, b^{\pm}_2  \te v(s_1,s_2) = \s{b^+_1}^{s_1}\s{b^+_2}^{s_2}\vv $ --- 4 вектора, а именно $$ \vv, b^+_1\vv, b^+_2\vv, b^+_1b^+_2\vv $$
+%
+Покажем, что найденные вектора являются линейно независимыми. Например,предположим ЛЗ для трех векторов:
+\begin{equation}\label{}
+\sys{
+	&  b^+_1\vv = \vv, \\
+	&  b^+_2\vv = b^+_1\vv \\
+}
+\te
+\sys{
+	& b^-_1b^+_1\vv = b^-_1\vv = 0 \\
+	& b^-_1b^+_2\vv = b^-_1b^+_1\vv 
+}
+\end{equation}
+
+\begin{equation}\label{}
+\sys{
+	& \s{(b^+_1b^-_1 + b^-_1b^+_1) - b^+_1b^-_1}\vv = \delta_{11}\vv - b^+_1(b^-_1\vv) = \vv \neq 0 \\
+	& \s{(b^-_1b^+_2 + b^+_2b^-_1) -  b^+_2b^-_1}\vv = \delta_{21}\vv - b^+_2b^-_1\vv = 0 \neq b^-_1b^+_1\vv  = \vv
+}
+\end{equation}
+
+Получаем противоречие $ \te $ эти комбинации --- линейно независимы. Полученный результат нетрудно повторить и для других комбинаций всех 4-ех векторов, т.е. получаем, что найденные вектора действительно всегда образуют базис.
+
+Доказательство, что базисов всегда $ 2^{N/2} $, весьма просто: у нас всегда в векторе типа $ v(s_1,...,s_{N/2}) $ стоит $ N/2 $ сомножителей, которые принимают по 2 возможных значений каждому, причём независимо друг от друга, тогда по комбинаторному правилу произведения  получаем искомое число элементов --- $ 2^{N/2} $.
+
+Таким образом вектора $ v(s_1,...,s_{N/2}) $ задают базис в пространстве V. В этом базисе операторам $ b_k^{-} $ и $b_k^{-} $, а значит и операторам  $ g_n  $ соответствуют матрицы $ 2^{N/2} \times 2^{N/2} $.
+
+\subsection{Матрицы Дирака}
+
+Матрицы, соответствующие $ g_n $, называются матрицами Дирака,обозначим их $ G_n $,  определяются из соотношений
+
+\begin{equation}\label{}
+g_n  v(s_1,...,s_{N/2})= (G_n)_{s_1,...,s_{N/2}}^{t_1,...,t_{N/2}} v(t_1,...,t_{N/2})
+\end{equation}
+
+Коэффициенты $ (G_n)_{s_1,...,s_{N/2}}^{t_1,...,t_{N/2}} $ являются матричными элементами матрицы $ G_n $.
+
+\underline{\textbf{Найдём их для алгебры $ \mathscr{A}(2) : $}} в задаче №3 мы выяснили, что базисом алгебры является комбинация $ e, \, g_1, \, g_2, \, g_1g_2 $, причём из антикоммутатора получаем равенство $ g_1^2 = g_2^2 = 1 = e $. Из свойств, полученных в \eqref{b_sc} можно записать:
+
+\begin{equation}\label{}
+\sys{
+& b^\pm = \dfrac{g_1 \pm ig_{2}}{2} \\
+& (b^\pm)^2 = 0 \\
+& \sak{b^+, b^-} = e
+}
+\end{equation}
+
+Рассмотрим наш вектор $ \vv : \vv \neq 0, \; b^+\vv \neq 0, \; b^-\vv = 0 $. Определим вектор $ \ket{s}: \ket{s}\hm{\stackrel{def}{=}} (b^+)^s\,\vv, \; s = 0,1 $. Тогда будет справедливо следующее:
+
+\begin{equation}\label{}
+\ket{0} = \vv = 1\ket{0}, \; \ket{1} = b^+\vv = 1\ket{1}
+\end{equation}
+%
+\begin{equation}\label{}
+b^-\ket{0} = 0 =  0\ket{0} + 0\ket{1}
+\end{equation}
+\begin{equation}\label{}
+b^-\ket{1} = b^-b^+\ket{0} = (e - b^+b^-)\ket{0} = 1\ket{0} + 0\ket{1}
+\end{equation}
+%
+\begin{equation}\label{}
+b^+\ket{0} = 0\ket{0} + 1\ket{1} 
+\end{equation}
+\begin{equation}\label{}
+b^+\ket{1} = b^+b^+\ket{0} = 0 = 0\ket{0} + 0\ket{1}
+\end{equation}
+
+Из коэффициентов перед вектором $ \ket{s} $ получаем искомые матрицы Дирака:
+
+\begin{equation}\label{}
+b^-\st \; \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix} \; \; \;\quad 
+b^+ \st \; \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}
+\end{equation}
+
+
+\underline{\textbf{Теперь посмотрим на  алгебру $ \mathscr{A}(4) : $}} Нам нужно найти 4 матрицы для $ (b^\pm)^2_1, (b^\pm)^2_2 $. Для этого мы выведем следующие равенства из \eqref{b_sc}:
+
+\begin{equation}\label{}
+\sys{
+& (b^{\pm}_{1,2})^2 = 0 \\
+& \sak{b^+_1, b^-_1} = \sak{b^+_2, b^-_2} = e \\
+& \sak{b^+_1, b^-_2} = \sak{b^+_2, b^-_1} = \sak{b^\pm_1, b^\pm_2} =  0 \\
+}
+\end{equation}
+
+Опять рассмотрим вектор $ \vv : \vv \neq 0, \; b^+_1\vv \neq 0, \; b^+_2\vv \neq 0, \; b^+_1b^+_2\vv \neq 0, \;  b^-_1\vv  \hm{=} b^-_2\vv \hm{=}  0 $. Вектор $ \ket{s}: \ket{s}\hm{\stackrel{def}{=}} (b^+_1)^{s_1}(b^+_2)^{s_2}\,\vv, \; s_1, s_2 = 0,1 $. Тогда:
+
+\begin{equation}\label{}
+\ket{0}  = \vv = 1\ket{0},\, \ket{1} = b^+_1\vv = 1\ket{1},\, \ket{2} = b^+_2\vv = 1\ket{2},\, \ket{3} = b^+_1b^+_2\vv = 1\ket{3}
+\end{equation}
+%
+\begin{equation}\label{}
+b^-_1\ket{0} = 0 = 0\ket{0} + 0\ket{1} + 0\ket{2} + 0\ket{3}
+\end{equation}
+%
+\begin{equation}\label{}
+b^-_1\ket{1} = (e - b^+_1b^-_1)\ket{0} = 1\ket{0} + 0\ket{1} + 0\ket{2} + 0\ket{3}
+\end{equation}
+%
+\begin{equation}\label{}
+b^-_1\ket{2} = - b^+_2b^-_1\ket{0} = 0 = 0\ket{0} + 0\ket{1} + 0\ket{2} + 0\ket{3}
+\end{equation}
+%
+\begin{equation}\label{}
+b^-_1\ket{3} = (e - b^+_1b^-_1)\ket{2} = 1\ket{2} - b^+_1(b^-_1\ket{2}) = 0\ket{0} + 0\ket{1} + 1\ket{2} + 0\ket{3}
+\end{equation}
+
+\begin{equation}\label{}
+b^+_1\ket{0} = 0\ket{0} + 1\ket{1} + 0\ket{2} + 0\ket{3}
+\end{equation}
+%
+\begin{equation}\label{}
+b^+_1\ket{1} = b^+_1b^+_1\ket{0} = 0 = 0\ket{0} + 0\ket{1} + 0\ket{2} + 0\ket{3}
+\end{equation}
+%
+\begin{equation}\label{}
+b^+_1\ket{2} = b^+_1b^+_2\ket{0} = 0\ket{0} + 0\ket{1} + 0\ket{2} + 1\ket{3}
+\end{equation}
+%
+\begin{equation}\label{}
+b^+_1\ket{3} = b^+_1b^+_1b^+_2\ket{0} = 0 = 0\ket{0} + 0\ket{1} + 0\ket{2} + 0\ket{3}
+\end{equation}
+
+\begin{equation}\label{}
+b^-_2\ket{0} = 0 = 0\ket{0} + 0\ket{1} + 0\ket{2} + 0\ket{3}
+\end{equation}
+%
+\begin{equation}\label{}
+b^-_2\ket{1} = b^-_2b^+_1\ket{0} = -b^+_1b^-_2\ket{0} = 0 = 0\ket{0} + 0\ket{1} + 0\ket{2} + 0\ket{3}
+\end{equation}
+%
+\begin{equation}\label{}
+b^-_2\ket{2} = (e - b^+_2b^-_2)\ket{0} = 1\ket{0} + 0\ket{1} + 0\ket{2} + 0\ket{3}
+\end{equation}
+%
+\begin{equation}\label{}
+b^-_2\ket{3} = b^-_2b^+_1b^+_2\ket{0} = -b^+_1b^-_2b^+_2\ket{0} = -b^+_1(e - b^+_2b^-_2)\ket{0} = 0\ket{0} - 1\ket{1} + 0\ket{2} + 0\ket{3}
+\end{equation}
+
+\begin{equation}\label{}
+b^+_2\ket{0} =  0\ket{0} + 0\ket{1} + 1\ket{2} + 0\ket{3}
+\end{equation}
+%
+\begin{equation}\label{}
+b^+_2\ket{1} = -b^+_1b^+_2\ket{0} = 0\ket{0} + 0\ket{1} + 0\ket{2} - 1\ket{3}
+\end{equation}
+%
+\begin{equation}\label{}
+b^+_2\ket{2} = 0 = 0\ket{0} + 0\ket{1} + 0\ket{2} + 0\ket{3}
+\end{equation}
+%
+\begin{equation}\label{}
+b^+_2\ket{3} = -b^+_1b^+_2\ket{2} = 0 = 0\ket{0} + 0\ket{1} + 0\ket{2} + 0\ket{3}
+\end{equation}
+
+Получаем ответ:
+
+\begin{equation}\label{}
+b^-_1 \st \; \begin{pmatrix}
+0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+  \end{pmatrix} \; \; \;\quad 
+b^+_1 \st \; \begin{pmatrix}
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 \\
+ \end{pmatrix}
+\end{equation}
+\begin{equation}\label{}
+b^-_2 \st \; \begin{pmatrix}
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\ 
+1 & 0 & 0 & 0 \\
+0 & -1 & 0 & 0 \\
+\end{pmatrix} \; \; \;\quad 
+b^+_2 \st \; \begin{pmatrix}
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & -1 \\ 
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+\end{pmatrix}
+\end{equation}
+
+
+\end{document}

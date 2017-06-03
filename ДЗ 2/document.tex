@@ -1,0 +1,203 @@
+\documentclass[12pt]{article} 
+\usepackage[left=20mm, top=16mm, right=16mm, bottom=20mm]{geometry} 
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\graphicspath{{../pictures/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps}
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}	
+\usepackage[utf8x]{inputenc} 
+\usepackage[russian]{babel} 
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} 
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+%\usepackage{indentfirst}     % Отступ в первом абзаце
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%% Свои команды
+%DeclareMathOperator{\sgn}{\mathop{sgn}}
+\newcommand{\te}{\ensuremath{\Rightarrow}}
+\newcommand{\y}{\ensuremath{\angle}}
+\newcommand{\ABC}{\ensuremath{\triangle ABC\,}}
+\newcommand{\tr}{\ensuremath{\triangle}}
+\newcommand{\ca}{\ensuremath{\cos\alpha}}
+\newcommand{\sa}{\ensuremath{\sin\alpha}}
+\newcommand{\cb}{\ensuremath{\cos\beta}}
+\newcommand{\sib}{\ensuremath{\sin\beta}}
+\newcommand{\ov}{\ensuremath{\overline}}
+\newcommand{\x}{\cdot}
+\newcommand{\st}{\ensuremath{\longrightarrow}}
+%DeclareMathOperator{\Sum}{\mathop{Sum}}
+\DeclareMathOperator{\Sum}{\mathop{Sum}}
+
+\begin{document}
+	
+\begin{titlepage}		
+\begin{center}
+\large 	Московский физико-технический университет \\
+Факультет общей и прикладной физики \\
+\vspace{0.2cm}
+Учебная программа\\
+"<Квантовая теория поля, теория струн и математическая физика">
+
+\vspace{4.5cm}
+II семестр 2016-2017 учебного года \\ \vspace{0.1cm}
+\large Домашнее задание №2: \\ \vspace{0.1cm}
+\LARGE \textbf{Взаимодействия элементарных частиц}
+\end{center}
+\vspace{2.3cm} \large
+
+\begin{center}
+		 Автор: \\
+ Иванов Кирилл,
+ 625 группа
+\vspace{10mm}
+
+
+\end{center}
+
+\begin{center} \vspace{50mm}
+г. Долгопрудный \\ 
+10 апреля 2017 года
+\end{center}
+\end{titlepage}
+
+\section{Задача №1}
+\begin{equation}
+\begin{aligned}
+\pi^- \st \mu^- + \overline{\nu} \\
+\pi^+ \st \mu^+ + \nu
+\end{aligned}
+\end{equation}
+
+Обозначив импульсы за $ p_{\mu}, p_{\pi}, p_{\nu} $, а энергии за  $ E_{\mu}, E_{\pi}, E_{\nu} $ соответственно, запишем законы сохранения энергии и импульса, принимая, что перед началом распада пион покоится $ \te p_{\pi} = 0 $:
+
+\begin{equation}
+\left\{
+\begin{aligned}
+&0 = \mathbf{p_{\mu} }+ \mathbf{p_{\nu}} \\
+& E_\pi = E_\mu + E_\nu \\
+&E_{\pi}^2 = m_\pi^2c^4 \\
+&E_{\mu}^2 = m_\mu^2c^4 + p_\mu^2c^2 \\
+&E_{\nu} =  p_\nu c \\
+\end{aligned}
+\right.
+\te
+\left\{
+\begin{aligned}
+&m_\pi c^2 = E_\mu + E_\nu \\
+&E_{\mu}^2 = m_\mu^2c^4 + E_{\nu}^2 \\
+\end{aligned}
+\right.
+\end{equation}
+
+Решим эту простую систему:
+
+$$ 
+\left\{
+\begin{aligned}
+& (E_\mu + E_\nu)(E_\mu - E_\nu) = m_\mu^2c^4 \\
+&E_\mu + E_\nu = m_\pi c^2  \\
+\end{aligned}
+\right.
+\te 
+\left\{
+\begin{aligned}
+& E_\mu - E_\nu = \dfrac{m_\mu^2c^2}{m_\pi} \\
+&E_\mu + E_\nu = m_\pi c^2  \\
+\end{aligned}
+\right.
+\te 
+\left\{
+\begin{aligned}
+& E_\mu = \dfrac{c^2}{2m_\pi}\left( m^2_\mu+ m^2_\pi \right)  \\
+& E_\nu = m_\pi c^2 - E_\mu \\
+\end{aligned}
+\right.
+$$
+
+Подставив значения $ m_\pi = 140 \text{ MeV}/c^2, m_\mu = 105 \text{ MeV}/c^2 $, находим, что 
+
+$$ E_\mu = \dfrac{c^4}{2\x140}(140^2/c^4 + 105^2/c^4) \approx 109 \text{ MeV}/c^2, $$
+$$ E_\nu \approx 140 - 109 = 31 \text{ MeV}/c^2 $$.
+
+\begin{center}
+	{\fbox{Ответ: $ E_\mu  \approx 109 \text{ MeV}/c^2, E_\nu \approx 31 \text{ MeV}/c^2  $}} \\
+\end{center} 
+
+\section{Задача 2}
+
+\begin{equation}
+\begin{aligned}
+&a)\, \gamma + p \st p + e^- + e^+ \\
+&b)\, \gamma + e^-  \st e^- + e^- + e^+ \\
+\end{aligned}
+\end{equation}
+
+a) Известно, что энергия релятивистской частицы $E_r = \sqrt{m^2c^4 + p^2c^2} $. Для фотона $ \gamma $, у которого масса равна нулю, $ E = pc $. Обозначив массу покоящегося протона за $ M $, получаем, что инвариантная (т.е. та, которая сохраняется) энергия системы в начале равна $ E_{i1}^2 = (pc + Mc^2)^2 - (pc)^2 $, а затем, в реакции  получается покоящийся протон и 2 покоящихся электрона массой $ m $ (т.к. мы ищем минимальную энергию, берём покоящиеся частицы), инвариантная энергия которого есть энергия покоя системы: $ E_{i2}^2 = (Mc^2 + 2mc^2)^2 $. Для осуществления реакции необходимо $ E_{i1} > E_{i2} $:
+
+\[ 
+(E + Mc^2)^2 - E^2 > (Mc^2 + 2mc^2)^2 ,
+\]
+\[ 
+E^2 + 2EMc^2 + M^2c^4  - E^2> M^2c^4 + 4Mmc^4 + 4m^2c^4 ,
+\]
+$$
+EMc^2 > 2Mmc^4 + 2m^2c^4 ,
+$$
+$$
+E > 2mc^2 \left(1 + \dfrac{m}{M}\right).
+$$
+Т.к. $ m = 0,5 \, \text{MeV}/c^2, M = 938 \text{MeV}/c^2 \te E > 1 \text{\,MeV}  $.
+\par
+б) Решаем аналогично:
+$$ (E + mc^2)^2 - E^2 > (3mc^2)^2 , $$
+$$	E^2 + m^2c^4 + 2Emc^2 - E^2 > 9m^2c^4	 $$
+$$ 	2Emc^2 > 8m^2c^4 $$
+$$ E > 4mc^2 \te  E > 2 \text{\,Mev} $$.
+
+\begin{center}
+{\fbox{Ответ: а) $ E_{min} = 1 \text{\,MeV}  $ б) $E_{min} =  2 \text{\,Mev}$}} \\
+\end{center} 
+
+\section{Задача 3}
+
+\begin{equation}
+\gamma + p \st p + \mu^+ + \mu^- 
+\end{equation} 
+
+Обозначив массу покоящегося протона за $ M $, массу мю-мезона за $m$ и энергию фотона за $E$, решаем такую же задачу:  
+
+$$ (E + Mc^2)^2 - E^2 > (Mc^2 + 2mc^2)^2 , $$
+$$ E > 2mc^2 \left(1 + \dfrac{m}{M}\right). $$
+
+Т.к. $ m = 105 \, \text{MeV}/c^2, M = 938 \text{MeV}/c^2 \te E > 233,5 \text{\,MeV}  $.
+
+\begin{center}
+	{\fbox{Ответ: $ E_{min} = 233,5 \text{\,MeV} $}} \\
+\end{center} 
+
+\section{Задача 4}
+
+Лептонное число электрона и мюона, а также соответствующих им нейтрино $L^+(e^-, \nu_{e}, \mu^-, \nu_{\mu}) \hm{=} +1$, а число их античастиц $L^-(e^+, \overline{\nu}_e, \mu^+, \overline{\nu}_\mu) \hm{=} -1$. Число нелептонов (таких как $ p, n, \gamma $ и их античастиц) равно $0$. \vspace{0.3cm}
+
+a) $ \mu^- + p \st e^- + p $:\\ реакция не идет, так как не выполняется \textbf{закон сохранения нуклонного (зарядового) числа} (слева +1, справа 0).
+
+b) $ p \st e^+ + \gamma $:\\ реакция {не идет, так как не выполняется \textbf{закон сохранения лептонного числа} (слева 0, справа $ -1 $).
+	
+c) $ \gamma + p \st n + e^+ $:\\ реакция не идет, так как не выполняется \textbf{закон сохранения лептонного числа} (слева 0, справа $ -1 $).
+
+d) $ n + p \st \overline{p} + \ov{n} + e^+ + e^+ $:\\ реакция не идет, так как не выполняется\textbf{ закон сохранения лептонного числа} (слева 0, справа -$ 2 $).
+
+e) $ e^- + p \st \ov{\nu} + n $:\\ реакция не идет, так как не выполняется \textbf{закон сохранения нуклонного (зарядового) числа} (слева $ -1 $, справа 0).
+
+f) $ p + p \st p + p + p + \ov{p} $:\\ здесь законы сохранения обоих чисел выполнены, т.е. такая реакция возможна.
+
+
+
+
+\end{document}

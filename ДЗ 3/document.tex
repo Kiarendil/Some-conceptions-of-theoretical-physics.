@@ -1,0 +1,227 @@
+\documentclass[12pt]{urticle} 
+\usepackage[left=20mm, top=16mm, right=16mm, bottom=20mm]{geometry} 
+%\usepackage{graphicx}
+%\usepackage{wrapfig}
+\graphicspath{{../pictures/}}
+%\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps}
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}	
+\usepackage[utf8x]{inputenc} 
+%\usepackage[russian]{babel} 
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} 
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+\usepackage{indentfirst}     % Отступ в первом абзаце
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%% Свои команды
+%DeclareMathOperator{\sgn}{\mathop{sgn}}
+\newcommand{\te}{\ensuremath{\Rightarrow}}
+\newcommand{\y}{\ensuremath{\angle}}
+\newcommand{\ABC}{\ensuremath{\triangle ABC\,}}
+\newcommand{\tr}{\ensuremath{\triangle}}
+\newcommand{\ca}{\ensuremath{\cos\alpha}}
+\newcommand{\sa}{\ensuremath{\sin\alpha}}
+\newcommand{\cb}{\ensuremath{\cos\beta}}
+\newcommand{\sib}{\ensuremath{\sin\beta}}
+\newcommand{\ov}{\ensuremath{\overline}}
+\newcommand{\x}{\cdot}
+\newcommand{\st}{\ensuremath{\longrightarrow}}
+%DeclareMathOperator{\Sum}{\mathop{Sum}}
+\DeclareMathOperator{\Sum}{\mathop{Sum}}
+
+\begin{document}
+	
+\begin{titlepage}		
+\begin{center}
+\large 	Московский физико-технический университет \\
+Факультет общей и прикладной физики \\
+\vspace{0.2cm}
+Учебная программа\\
+"<Квантовая теория поля, теория струн и математическая физика">
+
+\vspace{4.5cm}
+II семестр 2016-2017 учебного года \\ \vspace{0.1cm}
+\large Домашнее задание №3: \\ \vspace{0.1cm}
+\LARGE \textbf{Взаимодействия элементарных частиц и их свойства}
+\end{center}
+\vspace{2.3cm} \large
+
+\begin{center}
+		 Автор: \\
+ Иванов Кирилл,
+ 625 группа
+\vspace{10mm}
+
+
+\end{center}
+
+\begin{center} \vspace{50mm}
+г. Долгопрудный \\ 
+20 апреля 2017 года
+\end{center}
+\end{titlepage}
+
+\section{Задача №1}
+
+\begin{equation}
+ p + p \st p + p + p + \ov{p}
+\end{equation}
+
+Введём инвариантную массу:
+\begin{equation}
+M_{inv}^2  = \left(\sum E_i\right)^2 - \left(\sum p_i\right)^2
+\end{equation}
+
+Обозначим энергию налетающего протона за $ E  $,  его массу за $ m $ и импульс за $ p $, а аналогичные параметры частиц после реакции за $ E_i, p_i $ соответственно, $ i = 1, 2, 3, 4. $ Энергию покоя протона обозначим $ E_0 = mc^2 $.
+Принимая скорость света $ c = 1 $, запишем инвариантную массу в лабораторной системе отсчёта:
+
+\begin{equation}
+M_{inv_{до}}^2 = \left(E + E_0 \right)^2 -  p^2 = M_{inv_{после}}^2  = \left(\sum\limits_{i=1}^4 E_i\right)^2 - \left(\sum\limits_{i=1}^4  p_i\right)^2
+\end{equation} 
+Так как мы ищем минимальную энергию, то возьмём $ \left(\sum_{i=1}^4  p_i\right)^2 = 0  \te M_{inv_{после}}^2  = \left(\sum_{i=1}^4 E_i\right)^2 \hm{=} 16m^2. $
+Воспользуемся формулой энергии релятивистской частицы $ E = \sqrt{p^2 + m^2} $:
+$$ M_{inv_{до}}^2 = E^2 + 2mE + m^2 -  p^2 = p^2 + m^2 + 2mE + m^2 -  p^2  = 2mE + 2m^2;$$
+$$ 2mE_{min} + 2m^2 = 16m^2 \te E_{min} = 7m. $$
+
+Зная массу протона $ m = 940 \text{MeV}/c^2, $  находим $ E \approx 6,6  \,  \text{GeV}$.
+\begin{center}
+	{\fbox{Ответ: $ E_{min} \approx 6,6  \, \text{GeV} $}} \\
+\end{center} 
+
+\section{Задача №2}
+
+Для заряженного пиона возможен распад на электрон и электронное антинейтрино (и их "<антикомбинацию">):
+
+\begin{equation}
+\left\{
+\begin{aligned}
+&\pi^- \st e^- + \overline{\nu_e}\\
+&\pi^+ \st e^+ + \nu_e \\
+\end{aligned}
+\right.
+\end{equation}
+
+Действительно, здесь выполняется как закон сохранения знакового числа, так и закон сохранения лептонного числа (т.к. у пи-мезона $ L = 0 $), а у электрона и электронного антинейтрино (и их "<антикомбинации">) лептонные числа противоположны.
+
+Возможно также превращение нейтрально заряженного пиона в два гамма-кванта:
+
+\begin{equation}
+\pi^0 \st 2\gamma
+\end{equation}
+
+
+\section{Задача №3} \par
+Эти адроны разделены на две логические группы. \\
+
+
+1) Барионы состоят из 3 кварков: 
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+	\hline 
+	Барионы&$  p $ & $ n $ &$  \Lambda $ & $ \Sigma^+ $ &$  \Sigma^- $ & $ \Sigma^0 $ & $ \Xi^+ $ & $ \Xi^- $ & $ \Xi^0 $    \\ 
+	\hline 
+	Состав & $ uud $ & $ ddu $ & $ uds $ & $ uus $ & $ dds $ & $ uds $ & $ usc $ & $ dss $ & $ uss $   \\ 
+	\hline 
+\end{tabular} 
+\\
+
+2) Вторая логическая группа --- мезоны, состоящие из 2 кварков: 
+\par
+\vspace{0.1cm}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline 
+	Мезоны &$  \pi^+ $ & $ \pi^-  $& $ \pi^0 $ &$  K^+ $ & $ K^-  $& $ K^0 $ & $ \eta $ \\ 
+	\hline 
+	Состав &$  u\ov{d} $ & $ u\ov{d} $ & $ \dfrac{u\ov{u} - d\ov{d}}{\sqrt{2}} $ & $ u\ov{s} $ & $ u\ov{s}  $& $ \dfrac{d\ov{s} - s\ov{d}}{\sqrt{2}}  $ &  $ \dfrac{u\ov{u} + d\ov{d} - s\ov{s}}{\sqrt{6}} $  \\ 
+	\hline 
+\end{tabular} 
+
+Здесь чертой сверху обозначен антикварк.
+
+\section{Задача №4}
+
+У нас произошло превращение: 
+\begin{equation}
+s \st u + W^-
+\label{us}
+\end{equation}
+
+При этом возможно дальнейший распад бозона $ W^- $ на электрон и электронное антинейтрино. 
+
+$ \Sigma^- $ состоит из кварков $  dds $, а нейтрон --- из $ ddu $.  Рассмотрим нашу реакцию: 
+
+$$ \Sigma^- \st n + e^- + \ov{\nu_e} $$. 
+
+Из вышесказанного нетрудно заметить, что на более глубинном уровне проиходит превращение $ s$-кварка сигма-гипериона в $ u $-кварк нейтрона согласно \eqref{us}, а затем происходит распад бозона $ W^- $, т.е. 
+\begin{equation}
+\eqref{us} \Leftrightarrow dds \st ddu + W^- \st ddu + e^- + \ov{\nu_e}
+\end{equation}
+
+Поэтому такая реакция возможна.
+
+Напротив, $ \Sigma^+ $ состоит из $ uus $ кварков, и если $ s $ превращается в $ u $, то $ uu $ не превращается в $ dd $, поэтому данная реакция невозможна, хотя $ W^+ $-бозон и может превратиться в позитрон и электронное нейтрино.
+
+\section{Задача №5}
+
+\textbf{Фермионы} --- элементарные частицы с \textit{полуцелым} спином, а\textbf{ бозоны} --- с \textit{целым}.
+
+\begin{itemize}
+	
+	\item У кварков спин равен $ \frac12\hbar \te $  \textbf{$ d $-частица --- фермион.}
+	
+	\item Атом водорода состоит из просто-напросто одного протона, спин которого  $ \frac12\hbar \te $ \textbf{он тоже фермион}.
+	
+	\item Если $ N = Z $, т.е. в ядре одинаковое число нейтронов и протонов, то ядро будет обладать нулевым спином $ \te $ \textbf{оно будет бозоном.} Однако в обратном случае ($ N\neq Z$) спин будет ненулевым, но неизвестно, целым или нецелым (по-разному в конкретных случаях). \textbf{Тогда ядро может является как бозоном, так и фермионом.}
+	
+	\item Атом водорода $ H_2 $ состоит из двух фермионов со спином  $ \frac12\hbar  $. По правилу сложения спинов такая молекула может обладать как нулевым, так и единичным спинами (такие молекулы называются \textit{параводород} и \textit{оптоводород} соответственно). Получаем, что в обоих случаях такие молекулы являются \textbf{бозонами.}
+		
+\end{itemize}
+
+\section{Задача №6}
+
+\begin{equation}
+\mu^- \st e^- + e^+ + e^-
+\end{equation}
+
+ В данной реакции не выполняется закон сохранения лептонных чисел. Несмотря на обозначение у, например, отрицательного мюона и электрона одинакового числа $L =  +1 $, эксперименты показывают, что должны выполнятся законы сохранения различных лептонных чисел для каждого поколения лептонов, и $ L_e \neq L_\mu $. 
+ 
+ И хотя последние наблюдения показывают, что возможно нарушение данного правила для нейтрино (например, превращение электронного в мюонное), экспериментально не было обнаружено реакций с нарушением правила для остальных лептонов (таких, как в нашей реккции (8)). 
+
+\section{Задача №7}
+
+С помощью формул энергии и импульса релятивистской частицы найдем скорость электрона: 
+
+\begin{equation}
+p^2 = E^2/c^2 - m^2c^2 = \gamma^2 m^2v^2 
+\end{equation}
+
+где $ \gamma = \dfrac{1}{\sqrt{1-v^2/c^2}} $ --- релятивистский множитель. Решим это уравнение. % и для упрощения вычислений воспользуемся тем, что $ mc^2 \ll E $ (действительно, $ m_e \approx 0,5 \, \text{MeV}/c^2 $, а его энергия $ E = 50 \, \text{GeV} $). 
+
+$$ \left( \dfrac{E^2}{c^2} - m^2c^2\right) \left(1 - \dfrac{v^2}{c^2}\right) = m^2v^2 ,$$
+$$ \left( \dfrac{E^2}{c^2} - m^2c^2\right) - v^2\dfrac{E^2}{c^4} + v^2m^2   = m^2v^2,$$
+$$  v^2 E^2 = E^2c^2 - m^2c^6   ,$$
+\begin{equation}v = \sqrt{c^2 - \dfrac{m^2c^6}{E^2}} = c\sqrt{1 - \dfrac{m^2c^4}{E^2}} .
+\end{equation}
+
+Подставив значение $ m = 0,51 \, \text{MeV}/c^2 $ мы получаем  $ v = c\sqrt{1 - (\frac{0,51}{50000})^2} = \frac{99999999989596}{100000000000000}c$.
+
+Тогда такой электрон пролетает $ s = 17 $ км за время $ \tau  = \dfrac{s}{v}  \approx 5,7 \x 10^{-5} $ c. Тогда за время $ T = 12 \text{ ч} = 43200 \text{ c} $ он совершит $ N = \dfrac{T}{\tau} \approx 7,6 \x 10^8 $ раз.
+
+\begin{center}
+	{\fbox{Ответ: $ N \approx 7,6 \x 10^8 $ раз}} \\
+\end{center} 
+%$$ E^4 - 2m^2E^2 + m^4 = \dfrac{m^2v^2}{1-v^2}, $$
+%$$ (E^4 - 2m^2E^2)(1-v^2) = m^2v^2 ,$$
+%$$ E^4 - 2m^2E^2 -E^4v^2 + 2m^2E^2v^2 = m^2v^2 ,$$
+%$$ v^2(m^2 + E^4 - 2m^2E^2) = E^4 - 2m^2E^2, $$
+%$$ v^2 (E^4 - 2m^2E^2) = E^4 - 2m^2E^2, $$
+
+
+
+
+\end{document}
