@@ -278,5 +278,94 @@ z = r\cos\theta.
 
 \subsection{Задача 3}
 
+Будем решать задачу в декартовых координатах, где Лагранжиан равен
+
+\begin{equation}\label{Lxyz}
+\Ll = \dfrac{1}{2}m (\dot{x}^2 + \dot{y}^2 + \dot{z}^2 ) - \dfrac{k}{\sqrt{x^2 + y^2 +z^2}}
+\end{equation}
+
+Будем считать поворот как композицию поворотов вокруг осей $ x, y, z $. Например, повернув на угол $ \alpha $ вокруг оси $ z $, мы получаем замену координат 
+
+\begin{equation}\label{pov_z}
+\sys{
+	& x' = x\cos\alpha -y\sin\alpha\\
+	& y' = x\sin\alpha + y\cos\alpha\\
+	& z' = z
+}
+\te
+\sys{
+	& \dot{x'} = \dot{x}\cos\alpha - \dot{y}\sin\alpha\\
+	& \dot{y'} = \dot{x}\sin\alpha + \dot{y}\cos\alpha\\
+	& \dot{z'} = \dot{z}
+}
+\end{equation}
+
+Простой подстановкой в \eqref{Lxyz} нетрудно убедиться в инвариантности вида Лагранжиана в штрихованных координатах. Аналогично проверятся для 2 и 3 поворота вокруг осей $ x, y $. 
+
+Бесконечно-малые преобразования получаются, если мы считаем $ \alpha \ll 1 \te \cos\alpha \hm{\approx} 1, \sin\alpha \approx \alpha $:
+
+\begin{equation}\label{pov_z_bm}
+\sys{
+	& x' = x -y\alpha\\
+	& y' = x\alpha + y\\
+	& z' = z
+}
+\te
+\sys{
+	& \dot{x'} = \dot{x} - \dot{y}\alpha\\
+	& \dot{y'} = \dot{x}\alpha + \dot{y}\\
+	& \dot{z'} = \dot{z}
+}
+\end{equation}
+
+Запишем теперь в матричном виде для всех трех поворотов: 
+
+\begin{equation}\label{}
+M_x(\alpha) =
+\begin{pmatrix}
+1 & 0 & 0  \\
+0 & 1 & -\alpha  \\ 
+0 & \alpha & 1  \\
+\end{pmatrix}, \quad
+M_y(\beta) =
+\begin{pmatrix}
+1 & 0 & \beta  \\
+0 & 1 & 0  \\ 
+-\beta & 0 & 1  \\
+\end{pmatrix}, \quad
+M_z(\gamma) =
+\begin{pmatrix}
+1 & -\gamma & 0  \\
+\gamma & 1 & 0  \\ 
+0 & 0 & 1  \\
+ \end{pmatrix}, \quad
+\end{equation}
+
+Тогда единая матрица поворота будет произведением этих трех. Запишем ее, отбрасывая порядки малости больше первого: 
+
+\begin{equation}\label{}
+M(\alpha, \beta, \gamma) = \begin{pmatrix}
+1 & -\gamma & -\beta  \\
+\gamma & 1 & -\alpha  \\ 
+\beta & \alpha & 1  \\
+\end{pmatrix}
+\te 
+\begin{pmatrix}
+x' \\
+y' \\
+z'
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & -\gamma & -\beta  \\
+\gamma & 1 & -\alpha  \\ 
+\beta & \alpha & 1  \\
+\end{pmatrix}
+\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix}
+\end{equation}
 
 \end{document}
