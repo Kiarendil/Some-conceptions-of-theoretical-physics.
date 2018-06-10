@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.22)  12 OCT 2017 17:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.22)  3 JUN 2018 03:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**task1.tex
-(./task1.tex
+**task2.tex
+(./task2.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/texmf-local/tex/latex/toolkitex/kiarticle.cls
@@ -2256,28 +2256,28 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \NC@list=\toks43
 \extratabsurround=\skip66
 \backup@length=\skip67
-)) (./task1.aux
+)) (./task2.aux
 LaTeX Font Info:    Try loading font information for T2A+cmr on input line 7.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/cyrillic/t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 ))
-\openout1 = `task1.aux'.
+\openout1 = `task2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2287,14 +2287,14 @@ LaTeX Font Info:    ... okay on input line 16.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includefoot 
-* h-part:(L,W,R)=(71.13188pt, 483.69687pt, 42.67912pt)
+* h-part:(L,W,R)=(42.67912pt, 512.14963pt, 42.67912pt)
 * v-part:(T,H,B)=(56.9055pt, 752.57541pt, 35.56593pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=483.69687pt
+* \textwidth=512.14963pt
 * \textheight=717.00948pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
 * \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
@@ -2378,39 +2378,39 @@ Package caption Info: End \AtBeginDocument code.
 [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 60.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 58.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 60.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 60.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <6> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 60.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 60.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 58.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 58.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
-LaTeX Font Info:    Try loading font information for U+msa on input line 60.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
+LaTeX Font Info:    Try loading font information for U+msa on input line 58.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 60.
+LaTeX Font Info:    Try loading font information for U+msb on input line 58.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 60.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 58.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -2426,10 +2426,6 @@ LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 115
 (/usr/local/texlive/2016/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 ) [1]
-Overfull \hbox (10.92946pt too wide) in paragraph at lines 191--192
-[][] 
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2444,21 +2440,27 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3]
+Overfull \hbox (45.3167pt too wide) in paragraph at lines 213--214
+[]\T2A/cmr/m/n/12 Из опре-де-ле-ния сим-во-ла Леви-Чевиты и про-стой под-ста-но
+в-ки по-нят-но, что $[] \OT1/cmr/m/n/12 =[] \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/1
+2 q[];  [] \OT1/cmr/m/n/12 =
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4] (./task1.aux) ) 
+[4] (./task2.aux) ) 
 Here is how much of TeX's memory you used:
- 33910 strings out of 493014
- 776681 string characters out of 6133351
- 911682 words of memory out of 5000000
- 36893 multiletter control sequences out of 15000+600000
+ 33771 strings out of 493014
+ 773453 string characters out of 6133351
+ 906681 words of memory out of 5000000
+ 36754 multiletter control sequences out of 15000+600000
  17194 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,86p,10436b,618s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,86p,10436b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super
 /cm-super-t2a.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
@@ -2466,20 +2468,19 @@ s/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmmi6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
-pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on task1.pdf (5 pages, 208595 bytes).
+r8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pf
+b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on task2.pdf (5 pages, 191998 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 84 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,227 @@
+\documentclass[12pt]{kiarticle} 
+\graphicspath{{pictures/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps}
+%%%
+\pagestyle{fancy}
+\fancyhf{}
+%\renewcommand{\headrulewidth}{ 0.1mm }
+\renewcommand{\footrulewidth}{ .0em }
+\fancyfoot[C]{\texttt{\textemdash~\thepage~\textemdash}}
+\fancyhead[L]{Некоторые основы теоретической физики, ДЗ № 2\hfil}
+\fancyhead[R]{\hfil Иванов Кирилл, 625 группа }
+
+\newcommand{\Ll}{\ensuremath{\mathcal{L}}}
+
+\begin{document}
+	
+	\begin{titlepage}		
+		\begin{center}
+			\large 	Московский физико-технический университет \\
+			Факультет общей и прикладной физики \\
+			\vspace{0.2cm}
+			Образовательная программа\\
+			"<Квантовая теория поля, теория струн и математическая физика">
+			
+			\vspace{4.5cm}
+			III семестр 2017-2018 учебного года \\ \vspace{0.1cm}
+			\large Домашнее задание №2: \\ \vspace{0.1cm}
+			\LARGE \textbf{Элементы классической теории поля, Гамильтонов формализм}
+		\end{center}
+		\vspace{2.3cm} \large
+		
+		\begin{center}
+			Автор: \\
+			Иванов Кирилл,
+			625 группа
+			\vspace{10mm}
+			
+			
+		\end{center}
+		
+		\begin{center} \vspace{50mm}
+			г. Долгопрудный \\ 
+			24 сентября 2017 года
+		\end{center}
+	\end{titlepage}
+	
+	%______________________________________________________________________________________________
+	
+	
+	%
+	%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%
+	%
+	
+	\section{Вопросы}
+	
+	В прошлом задании мы ввели функцию Лагранжа $ \Ll = \Ll \left( q_i(t), \dot{q_i}(t), t\right) = T - U $. Аналогично вводится \textbf{функция Гамильтона}:
+	
+	\begin{equation}\label{}
+	H = H (p_i, q_i, t) = p_i\dot{q_i} - \Ll 
+	\end{equation}
+	
+	\textbf{Физический смысл:} для консервативных систем функция Гамильтона представляет полную энергию (выраженную как функция координат и импульсов), то есть — в классическом смысле — сумму кинетической и потенциальной энергий системы.
+	
+	Теперь пусть у нас есть функция $ f(p, q, t) $. Тогда вводится определение\textbf{ скобок Пуассона} как
+	
+	\begin{equation}\label{sk}
+	\sak{H, f} = \pdd{H}{p_k}\pdd{f}{q_k} - \pdd{f}{p_k}\pdd{H}{q_k} 
+	\end{equation}
+	
+	По правилу Эйнштейна здесь и далее подразумевается суммирование по повторяющимся индексам.
+	
+	Перечислим свойства скобок Пуассона: 
+	\begin{itemize}
+		\item $ \sak{\co, f} = 0 $
+		
+		\item Линейность: 
+		
+		\begin{itemize}
+			\item $ \sak{f_1 + f_2, g} = \sak{f_1, g} + \sak{f_2, g} $
+			\item $ \sak{\alpha f, g} = \sak{f, \alpha g} = \alpha \sak{f, g},\quad \forall \alpha = \co $
+		\end{itemize}
+	
+	\item Антикоммутативность: $ \sak{f, g} = - \sak{g, f} $
+	
+	\item Одна из функций совпадает с импульсом или координатой:
+	
+	\begin{itemize}
+		\item $ \sak{f, p_k} = -\pdd{f}{q_k} $
+			\item $ \sak{f, q_k} = \pdd{f}{p_k} $
+	\end{itemize}
+	
+	\item Тождество Якоби: $ \sak{f,\sak{g, h}} + \sak{h,\sak{f, g}} + \sak{g,\sak{h, f}} = 0   $
+	\end{itemize}
+	 
+	
+	\section{Упражнения}
+	
+	\subsection{Упражнение №1}
+	
+	Из математики известно, что по определению, полный дифференциал функции $ \Ll(q_i, \dot{q_i}) $ равен 
+	
+	\begin{equation}\label{}
+	d\Ll = \pdd{\Ll}{q_i}dq_i + \pdd{\Ll}{\dot{q_i}}d\dot{q_i}
+	\end{equation}
+	
+	Импульс записывается через функцию Лагранжа как $ p_i = \pdd{\Ll}{\dot{q_i}}, \dot{p_i} = \pdd{\Ll}{q_i} $ (что напрямую следует из уравнений Лагранжа), тогда перепишем 
+	
+	\begin{equation}\label{}
+	d\Ll = \dot{p_i}dq_i + p_id\dot{q_i}
+	\end{equation}
+	
+	При этом можно записать $ p_id\dot{q_i} $ в виде $ d(p_i\dot{q_i}) -dp_i\dot{q_i} $, тогда объединим два полных дифференциала
+	
+	\begin{equation}\label{dH}
+	d(p_i\dot{q_i} - \Ll) \equiv dH = \dot{q_i}dp_i - \dot{p_i}dq_i
+	\end{equation}
+	
+	Отсюда сразу следуют искомые уравнения Гамильтона:
+	
+	\begin{equation}\label{HH}
+	\sys{
+	& \dot{q_i} = \pdd{H}{p_i} \\
+	& \dot{p_i} = -\pdd{H}{q_i}
+}
+	\end{equation}
+	
+	\subsection{Упражнение 2}
+	
+	Доказать тождество Якоби можно просто подставив в искомое уравнение \eqref{fgh} определение скобок \eqref{sk} и произведя расчеты: 
+	\begin{equation}\label{fgh}
+	\sak{f,\sak{g, h}} + \sak{h,\sak{f, g}} + \sak{g,\sak{h, f}} = 0   
+	\end{equation}
+	
+	Попробуем доказать его более "<умным"> путем. Заметим, что скобки Пуассона зависят от производных первого порядка функций в скобках, и при "<двойной"> скобке, как в \eqref{fgh} --- второго порядка. В целом же равенство \eqref{fgh} представляет собой линейную однородную функцию вторых производных от $ f,g,h $. При этом в каждой из скобок есть вторые производные только функций "<внутри"> второй скобки. Запишем тогда вторые производные функции $ f $ (т.е. второй и третий члены \eqref{fgh}), введя линейные дифференциальные операторы $ D_1 = \sak {g, \;}, D_2 = \sak{h, \;} $:
+	
+	\begin{equation}\label{}
+	\sak{h,\sak{f, g}} + \sak{g,\sak{h, f}} = \sak{g,\sak{h, f}} - \sak{h,\sak{g, f}} = D_1(D_2(f)) - D_2(D_1(f)) = (D_1D_2 - D_2D_1)(f)
+	\end{equation}
+	
+	В общем случае, линейный дифференциальный оператор имеет вид
+	
+	\begin{equation}\label{}
+	D_i = \phi_{ik} \pdd{}{x_k}
+	\end{equation}
+	
+	А $ \phi_i $ --- произвольная функция переменных $ x_1, ..., x_k $. Тогда произведением этих операторов является сумма (по правилу дифференцирования):
+	
+	\begin{equation}\label{}
+	D_iD_j = \phi_{ik}\phi_{jl}\dfrac{\partial^2}{\partial x_l \partial x_l} + \phi_{ik} \pdd{\phi_{jl}}{x_k}\pdd{}{x_l}
+	\end{equation}
+	
+	В нашем случае, разность произведений $ D_1D_2 - D_2D_1 $ уничтожает первый член из-за перестановки смешенной производной, оставляя только член вида:
+	
+	\begin{equation}\label{}
+	D_1D_2 - D_2D_1 =  \left( \phi_{1k}\pdd{\phi_{2l}}{x_k} - \phi_{2k}\pdd{\phi_{1l}}{x_l} \right) \pdd{}{x_l} 
+	\end{equation}
+	
+	Таким образом, все вторые производные $ f $ сокращаются. Аналогично это действует и для $ h, g $, и все выражение тождественно обращаются в нуль в силу симметрии задачи. 
+	
+	
+	\subsection{Упражнение 3}
+	
+	По определению, интеграл движения --- это функция, зависящая от $ q, \dot{q}, t $.  Однако в Гамильтоновой механике мы осуществляем преобразования Лежандра -- переход от одного набора независимых переменных к другому. В нашем случае это вывод уравнений Гамильтона \eqref{HH}. 
+	
+	Тогда и интеграл движения может быть представим как функция от координат и импульсов, а не скоростей. Распишем это явно:
+	
+	\begin{equation}\label{}
+	\dfrac{dI(q, p)}{dt} = 0 \ekv \dfrac{dI}{dt} = \pdd{I}{p_i}\dot{p_i} + \pdd{I}{q_i}\dot{q_i} = 0
+	\end{equation}
+	
+	Подставив сюда уравнений Гамильтона \eqref{HH} мы получаем искомое тождество:
+	
+	\begin{equation}\label{}
+	 -\pdd{I}{p_i}\pdd{H}{q_i} + \pdd{I}{q_i}\pdd{H}{p_i} = \sak{H, I} = 0
+	\end{equation}
+	
+	\subsection{Упражнение 4}
+	
+	Из предыдущего упражнения известно, что для интегралов движения $ I_1, I_2 $ выполнено соотношение $ \sak{H, I_1} =   \sak{H, I_2} = \sak{I_1, H} =\sak{I_2, H} = 0$. Тогда применим тождество Якоби для функций $ H, I_1, I_2 $:
+	
+	\begin{equation}\label{}
+	\sak{H,\sak{I_1, I_2}} + \sak{I_2,\sak{H, I_1}} + \sak{I_1,\sak{I_2, H}} = 0   
+	\end{equation}
+		
+	Из свойств скобок Пуассона получаем, что второй и третий член обращаются в ноль, но тогда и первый равен нулю, что и требовалось доказать. 
+	
+	Отсюда мы получаем, что скобка $ \sak{I_1, I_2}  $ --- тоже интеграл движения (ведь она удовлетворяет свойству, доказанному в прошлом упражнении.) Это свойство называется теоремой Пуассона.
+	
+	
+	\section{Задача}
+	
+	Вычислим следующие скобки Пуассона: 
+	
+	\begin{equation}\label{}
+	\sak{q_i, q_j} = \pdd{q_i}{p_k} \pdd{q_j}{q_k} - \pdd{q_j}{p_k}\pdd{q_i}{p_k}; \quad
+	 \sak{p_i, p_j} = \pdd{p_i}{p_k} \pdd{p_j}{q_k} - \pdd{p_j}{p_k}\pdd{p_i}{p_k};
+	\end{equation}
+	
+	Однако $ q, p $ --- независимый набор координат, т.е. $ \pdd{q_i}{p_k} =  \pdd{p_j}{q_k} = 0 \te  	\sak{q_i, q_j} =\sak{p_i, p_j} \hm{=} 0$. Скобка Пуассона между ними равна 
+	
+	\begin{equation}\label{}
+	\sak{p_i, q_j} = \pdd{p_i}{p_k}\pdd{q_j}{q_k} - \pdd{p_i}{q_k}\pdd{q_j}{p_k} = \pdd{p_i}{p_k}\pdd{q_j}{q_k}  = \delta_{ij} 
+	\end{equation}
+	
+	Из свойств скобок Пуассона известно, что при умножении функции на импульс или координату мы получаем просто частную производную по другой переменной. Разберем на примере координаты и момента $ M_i = \epsilon_{ijk}p_jq_k $:
+	
+	\begin{equation}\label{}
+	\sak{M_i, q_j} = \pdd{M_i}{p_j} = \pdd{}{p_j}\epsilon_{ijk}p_jq_k = \epsilon_{ijk} \left( \pdd{p_j}{p_j}q_k + \pdd{q_k}{p_j}p_j \right) = q_k
+	\end{equation}
+	
+	Из определения символа Леви-Чевиты и простой подстановки понятно, что $ \sak{M_i, q_k} \hm{=} -q_j, \; \sak{M_i, q_i} = 0 $. Аналогично получаются остальные скобки путем циклической перестановки символов $ i, j, k $ у компонент $ M_i, M_j, M_k, p_i, p_j, p_k $. 
+	
+	Теперь вычислим скобку от двух моментов простой подстановкой в определение \eqref{sk}
+	
+	\begin{equation}\label{}
+	\sak{M_i, M_j} = \pdd{M_i}{p_k}\pdd{M_j}{q_k} - \pdd{M_j}{p_k}\pdd{M_i}{q_k}
+	\end{equation}
+	
+	Но из прошлых вычислений мы знаем, чему равны эти частные производные! Подставим: 
+	
+	\begin{equation}\label{}
+		\sak{M_i, M_j} = q_jp_i - q_ip_j = \epsilon_{ijk} M_k
+	\end{equation}
+	
+	\end{document}

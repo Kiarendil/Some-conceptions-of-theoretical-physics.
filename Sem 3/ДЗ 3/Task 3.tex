@@ -1,0 +1,87 @@
+\documentclass[12pt]{kiarticle} 
+\graphicspath{{pictures/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps}
+%%%
+\pagestyle{fancy}
+\fancyhf{}
+%\renewcommand{\headrulewidth}{ 0.1mm }
+\renewcommand{\footrulewidth}{ .0em }
+\fancyfoot[C]{\texttt{\textemdash~\thepage~\textemdash}}
+\fancyhead[L]{Некоторые концепции теоретической физики, ДЗ № 2\hfil}
+\fancyhead[R]{\hfil Иванов Кирилл, 625 группа }
+
+\newcommand{\Ll}{\ensuremath{\mathcal{L}}}
+\newcommand{\deff}{\ensuremath{\stackrel{def}{=}}}
+
+
+\begin{document}
+
+\begin{titlepage}		
+	\begin{center}
+		\large 	Московский физико-технический институт \\
+		Факультет общей и прикладной физики \\
+		\vspace{0.2cm}
+		Образовательная программа\\
+		"<Квантовая теория поля, теория струн и математическая физика">
+		
+		\vspace{4.5cm}
+		III семестр 2017-2018 учебного года \\ \vspace{0.1cm}
+		\large Домашнее задание №2: \\ \vspace{0.1cm}
+		\LARGE \textbf{Элементы классической теории поля, Лагранжев формализм}
+	\end{center}
+	\vspace{2.3cm} \large
+	
+	\begin{center}
+		Автор: \\
+		Иванов Кирилл,
+		625 группа
+		\vspace{10mm}
+		
+		
+	\end{center}
+	
+	\begin{center} \vspace{50mm}
+		г. Долгопрудный \\ 
+		15 сентября 2017 года
+	\end{center}
+\end{titlepage}
+
+%______________________________________________________________________________________________
+
+
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+
+\section{Вопросы}
+
+Определим скобку Пуассона для функций $ f(x_i), g(x_i) $, где $ x_i $ --- произвольные координаты на фазовом пространстве, $ i = 1, 2, \dots, 2n $:
+
+\begin{equation}\label{}
+\sak{f(x), g(x)} \deff \omega^{\mu\nu} \pdd{f}{x^\mu}\pdd{g}{x^\nu}
+\end{equation}
+
+где подразумевается суммирование по повторяющимся индексам (здесь и далее), а $ \omega^{\mu\nu} (x)$ --- антисимметричный тензор 2 ранга, т.е. $ \omega^{\mu\nu} (x) = -  \omega^{\nu\mu} (x)$.
+
+Можно определить дифференциальную 2-форму $ \omega $ через внешнее произведение 1-форм $ dx^\mu $, и тогда будем говорить, что каждому нашему тензору $ \omega^{\mu\nu} $ соответствует форма $ \omega $, такая что
+
+\begin{equation}\label{}
+\omega = \omega^{\mu\nu} dx^\mu \wedge dx^\nu
+\end{equation} 
+
+Определим операцию внешнего дифференцирования формы как
+
+ \begin{equation}\label{}
+d = dx^\mu \pdd{}{x^\mu}
+\end{equation}
+
+Тогда форма $ A $ будет называться замкнутой, если $ dA = 0 $.
+
+
+
+
+
+
+\end{document}
